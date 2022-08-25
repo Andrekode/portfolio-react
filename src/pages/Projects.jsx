@@ -23,8 +23,8 @@ function Projects() {
                 <p className="project-head__subtitle">
                     These are some of the projects I've done.
                 </p>
-                <div className="projects-content">{allProjects}</div>
             </div>
+            <div className="projects-content">{allProjects}</div>
         </section>
     )
 }
