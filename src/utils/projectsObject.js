@@ -9,6 +9,7 @@ const projectsObject = [
         title: 'Portfolio',
         desc: 'My portfolio',
         imgSrc: portfolioSrc,
+        alt: 'Image Project',
         livePage: 'https://andrekode.github.io/Portfolio/',
         githubRepo: 'https://github.com/Andrekode/Portfolio',
         languageLogoCdns: [
@@ -39,6 +40,7 @@ const projectsObject = [
         title: 'Frontend Mentor: Calculator',
         desc: 'Frontend-Mentor challenge done with React and styled components. Responsive.',
         imgSrc: fmCalcSrc,
+        alt: 'Image Project',
         livePage: 'https://andrekode.github.io/fm-calculator-app/',
         githubRepo: 'https://github.com/Andrekode/fm-calculator-app',
         languageLogoCdns: [
@@ -69,6 +71,7 @@ const projectsObject = [
         title: 'Simple To-do',
         desc: 'Simple To-do app',
         imgSrc: toDoSrc,
+        alt: 'Image Project',
         livePage: 'https://andrekode.github.io/todoRedo/',
         githubRepo: 'https://github.com/Andrekode/todoRedo',
         languageLogoCdns: [
@@ -99,6 +102,7 @@ const projectsObject = [
         title: 'Frontend Mentor TimeTracking',
         desc: 'A frontend mentor challenge',
         imgSrc: timeTrackingSrc,
+        alt: 'Image Project',
         livePage: 'https://andrekode.github.io/timetrackingdashboard/',
         githubRepo: 'https://github.com/Andrekode/timetrackingdashboard',
         languageLogoCdns: [

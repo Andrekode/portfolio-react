@@ -1,27 +1,34 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { Button, Box, Stack, Typography } from '@mui/material'
+
 function Home() {
     return (
-        <section className="home" id="home">
-            <div className="hero-content pad">
-                <h1 className="hero-content__title">Hey, I'm Andrè Mæland</h1>
-                <p className="hero-content__subtitle">
-                    Full-Stack Web Developer
-                </p>
-                <p className="hero-content__subtitle2">
-                    Loving all things
-                    <span className="subtitle2-bracket">&#123;</span>
-                    <span className="subtitle2-code">code</span>
-                    <span className="subtitle2-bracket">&#125;</span>
-                </p>
-                <NavLink
-                    className="hero-content__project-button"
-                    to="/projects"
-                >
+        <Box component="section" sx={{ bgcolor: 'primary.light'}}>
+            <Stack
+                justifyContent="center"
+                alignItems="center"
+                minHeight="100vh"
+            >
+                <Box component="div">
+                    <Typography variant="h1" color="#ffffff">Hey, I'm Andrè Mæland</Typography>
+                </Box>
+                <Box component="div">
+                    <Typography variant="p" color="#ffffff"  sx={{margin: '0'}} >
+                        Full-Stack Web Developer
+                    </Typography>
+                </Box>
+                <Box component="p" mb="2em" >
+                    <Typography variant="p" color="#ffffff">Loving all things</Typography>
+                    <Typography variant="span">&#123;</Typography>
+                    <Typography variant="span">code</Typography>
+                    <Typography variant="span">&#125;</Typography>
+                </Box>
+                <Button variant="contained" component={NavLink} to="/projects">
                     Projects
-                </NavLink>
-            </div>
-        </section>
+                </Button>
+            </Stack>
+        </Box>
     )
 }
 

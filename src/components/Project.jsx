@@ -1,28 +1,36 @@
-import React from 'react'
+import React from "react"
+import { Grid } from "@mui/material"
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
-function Project({ title, desc, imgSrc, livePage, githubRepo, logoCdns }) {
+function Project({ title, desc, imgSrc, imgAlt, livePage, githubRepo, logoCdns }) {
     const languageLogos = logoCdns
         .filter((language) => language.inProject)
         .map((logo, i) => {
             return (
                 <img
                     key={i}
-                    className="project-lang__img"
                     src={logo.src}
                     alt={logo.alt}
+                    width='50'
                 />
             )
         })
 
     return (
-        <>
-            <div className="project">
-                <img className="project__img" src={imgSrc} alt="Porfolio" />
-            </div>
-            <div className="project-desc">
-                <h3 className="project-desc__title">{title}</h3>
-                <p className="project-desc__text">{desc}</p>
-                <div className="project-lang">{languageLogos}</div>
+        <Card sx={{bgcolor: 'primary.dark'}}>
+            <CardMedia component='img' image={imgSrc} alt={imgAlt}>
+            </CardMedia>
+            <CardContent >
+                <Typography component='div' variant='h3' gutterBottom>{title}</Typography>
+                <Typography variant='body'>{desc}</Typography>
+        <CardContent >
+                {languageLogos}
+        </CardContent>
                 {githubRepo && (
                     <a
                         className="project-desc__link"
@@ -43,8 +51,8 @@ function Project({ title, desc, imgSrc, livePage, githubRepo, logoCdns }) {
                         Live Github
                     </a>
                 )}
-            </div>
-        </>
+            </CardContent>
+        </Card>
     )
 }
 

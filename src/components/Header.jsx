@@ -5,12 +5,7 @@ import logo from '../assets/images/avatar.png'
 function Header() {
     return (
         <header className="header">
-            <img
-                className="avatar"
-                src={logo}
-                alt="logo"
-            />
-            <Nav />
+            <img className="avatar" src={logo} alt="logo" />
         </header>
     )
 }
