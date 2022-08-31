@@ -10,9 +10,8 @@ function Projects() {
 
     const allProjects = projectsObject.map((project) => {
         return (
-            <Grid item  xs={8} md={4}>
+            <Grid item  xs={8} md={4} key={project.id}>
                 <Project
-                    key={project.id}
                     title={project.title}
                     desc={project.desc}
                     imgSrc={project.imgSrc}
@@ -25,13 +24,14 @@ function Projects() {
         )
     })
     return (
-        <Box component="section" minHeight="100vh" p='0.5em'>
+        <Box component="section" minHeight="100vh" p='0.5em' sx={{bgcolor: 'primary.light'}}>
             <ContentHeader title={title} subtitle={subtitle} />
             <Box
                 component="div"
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
+                sx={{width: '100%'}}
             >
                 <Grid container spacing={2}  justifyContent='center'>
                     {allProjects}

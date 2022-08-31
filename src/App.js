@@ -12,7 +12,6 @@ function App() {
     return (
         <ThemeProvider theme={theme}>
             <HashRouter>
-                <div className="App">
                     <NavBar />
                     <Routes>
                         <Route exact path="/" element={<Home />} />
@@ -20,7 +19,6 @@ function App() {
                         <Route path="/projects" element={<Projects />} />
                         <Route path="/contact" element={<Contact />} />
                     </Routes>
-                </div>
             </HashRouter>
         </ThemeProvider>
     )

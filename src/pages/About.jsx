@@ -8,7 +8,7 @@ function About() {
     const { title, subtitle } = pageContent[0]
 
     return (
-        <Box component="section" minHeight="100vh" p="0.5em">
+        <Box component="section" minHeight="100vh" p="0.5em" sx={{bgcolor: 'primary.light'}}>
             <ContentHeader title={title} subtitle={subtitle} />
             <Box
                 component="div"

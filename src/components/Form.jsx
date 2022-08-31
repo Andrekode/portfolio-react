@@ -11,7 +11,7 @@ function Form() {
     }
 
     return (
-        <div className="form-container">
+        <Box component='div'>
             <form onSubmit={(e) => handleSubmit(e)}>
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid
@@ -72,7 +72,7 @@ function Form() {
                     </Grid>
                 </Box>
             </form>
-        </div>
+        </Box>
     )
 }
 

@@ -16,6 +16,7 @@ function Nav({ pages }) {
                             fontWeight: 700,
                             letterSpacing: '.1rem',
                             color: '#ffffff',
+                            textTransform: 'uppercase'
                         }}
                     >
                         {page.home}

@@ -10,7 +10,7 @@ export default function Skills() {
             >
                 {cdnLogoUrls.map((logo) => (
                     <Grid item xs={4} md={2} key={logo.alt}>
-                        <img src={logo.src} alt={logo.alt} key={logo.src} />
+                        <img src={logo.src} alt={logo.alt} key={logo.src} width="60" />
                     </Grid>
                 ))}
             </Grid>

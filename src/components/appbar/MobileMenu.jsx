@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react"
 import { NavLink } from "react-router-dom"
 import IconButton from "@mui/material/IconButton"
+import MenuOpenIcon from "@mui/icons-material/MenuOpen"
 import MenuIcon from "@mui/icons-material/Menu"
 import Menu from "@mui/material/Menu"
 import MenuItem from "@mui/material/MenuItem"
@@ -10,7 +11,7 @@ export default function MobileMenu({ pages }) {
     const iconButton = useRef(null)
     const [anchorElNav, setAnchorElNav] = useState(null)
 
-    const styleNavLink = { textDecoration: "none" }
+    const styleNavLink = { textDecoration: "none", textTransform: "uppercase" }
 
     const handleOpenNavMenu = () => {
         setAnchorElNav(iconButton.current)
@@ -31,7 +32,7 @@ export default function MobileMenu({ pages }) {
                 onClick={handleOpenNavMenu}
                 color="inherit"
             >
-                <MenuIcon />
+                {Boolean(anchorElNav) ? <MenuOpenIcon /> : <MenuIcon />}
             </IconButton>
             <Menu
                 id="menu-appbar"
